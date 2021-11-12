@@ -24,7 +24,7 @@
             {{-- @if (auth()->user) --}}
             @auth
                 <li>
-                    <a href="" class="p-3">João Gottardi</a>
+                    <a href="" class="p-3">{{ auth()->user()->username }}</a>
                 </li>
                 <li>
                     <form action="{{ route('logout') }}" method="POST" class="p-3 inline">
