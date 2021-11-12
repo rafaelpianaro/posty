@@ -26,7 +26,7 @@ class RegisterController extends Controller
             'nome.required' => 'Campo obrigatório.',
             'nome.min' => ':attribute precisa conter ao menos :min caracteres.'
         ]
-    );
+        );
         // dd('store');
         User::create([
             'name' => $request->nome,
