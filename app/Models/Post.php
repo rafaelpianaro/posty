@@ -15,6 +15,11 @@ class Post extends Model
         'created_at',
     ];
 
+    public function likedBy(User $user)
+    {
+        return $this->likes->contains('user_id', $user->id); // laravel colletion
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);
