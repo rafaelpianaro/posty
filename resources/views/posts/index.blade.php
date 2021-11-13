@@ -25,7 +25,7 @@
                         <a href="" class="font-bold">{{ $post->user->username }}</a>
                         <span class="text-gray-600 text-sm">{{ $post->created_at->diffForHumans() }}</span>
                         <p class="mb-2">{{ $post->body }}</p>
-                        @if ($post->ownedBy(auth)->user())
+                        @if ($post->ownedBy(auth()->user()))
                             <div>
                                 <form action="{{ route('posts.destroy', $post) }}" method="post">
                                     @csrf
